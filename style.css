@@ -611,11 +611,89 @@ nav .fas{
     text-decoration: none;
 }
 
+/* From Uiverse.io by javierBarroso */ 
+.button {
+    position: relative;
+    width: 3.5em;
+    height: 3.5em;
+    border: none;
+    float: right;
+    background: rgba(180, 83, 107, 0.11);
+    border-radius: 10px;
+    transition: background 0.5s;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  
+  .X {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2em;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transform: translateX(-50%) rotate(45deg);
+    pointer-events: none;
+  }
+  
+  .Y {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2em;
+    height: 2px;
+    background-color: #fff;
+    transform: translateX(-50%) rotate(-45deg);
+    pointer-events: none;
+  }
+  
+  .close {
+    float: right;
+    position: absolute;
+    display: flex;
+    padding: 0.8rem 1.5rem;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+    top: -70%;
+    left: 50%;
+    width: 3em;
+    height: 1.7em;
+    font-size: 12px;
+    background-color: rgb(19, 22, 24);
+    color: rgb(187, 229, 236);
+    border: none;
+    border-radius: 3px;
+    pointer-events: none;
+    opacity: 0;
+  }
+  
+  .button:hover {
+    background-color: #5cbbe8;
+  }
+  
+  .button:active {
+    background-color: #5cbbe8;
+  }
+  
+  .button:hover > .close {
+    animation: close 0.2s forwards 0.25s;
+  }
+  
+  @keyframes close {
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
 /* From Uiverse.io by Smit-Prajapati */ 
 .parent {
     width: 100%;
     max-width: 750px;
-    padding: 25px;
+    padding: 50px;
     perspective: 1000px;
     justify-content: center;
     align-items: center;
@@ -656,6 +734,7 @@ nav .fas{
     font-weight: 900;
     transition: all 0.5s ease-in-out;
     transform: translate3d(0px, 0px, 50px);
+    pointer-events: none;
   }
   
   .content-box .card-title:hover {
